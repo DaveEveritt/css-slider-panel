@@ -8,11 +8,6 @@ body {
   color: #333;
 }
 
-/*
-Adapted from an original by A. J. Webb
-https://codepen.io/webbushka/pen/CtbLd
-*/
-
 section {
   width: var(--boxWidth);
   height: 400px;
