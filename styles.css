@@ -1,0 +1,65 @@
+html {
+  --boxWidth: 500px;
+  --boxWidthNeg: -500px;
+}
+body {
+  background: #aaa;
+  font: 1em/0.75em sans-serif;
+  color: #333;
+}
+
+/*
+Adapted from an original by A. J. Webb
+https://codepen.io/webbushka/pen/CtbLd
+*/
+
+section {
+  width: var(--boxWidth);
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #3b3b3b;
+  border: 3px solid #fff;
+}
+section:hover {
+  border-color: #999;
+}
+section:hover article{
+  animation-play-state: paused;
+}
+
+article {
+  position: absolute;
+  left: var(--boxWidth);
+  background: #3b3b3b;
+  color: #e3e3e3;
+  width: var(--boxWidth);
+  height: inherit;
+  text-align: center;
+  animation: slideIn 50s ease-in-out infinite;
+}
+/* animation: name duration timing-function delay iteration-count; */
+article h2 {
+  margin-top: 1em;
+  font-weight: normal;
+}
+
+article:nth-of-type(1) { animation-delay: 0s; }
+article:nth-of-type(2) { animation-delay: 5s; }
+article:nth-of-type(3) { animation-delay: 10s; }
+article:nth-of-type(4) { animation-delay: 15s; }
+article:nth-of-type(5) { animation-delay: 20s; }
+article:nth-of-type(6) { animation-delay: 25s; }
+article:nth-of-type(7) { animation-delay: 30s; }
+article:nth-of-type(8) { animation-delay: 35s; }
+article:nth-of-type(9) { animation-delay: 40s; }
+article:nth-of-type(10){ animation-delay: 45s; }
+
+@keyframes slideIn {
+  0% { left: var(--boxWidth); }
+  1% { left: 0; }
+  10% { left: 0; }
+  100%{ left: var(--boxWidthNeg); }
+  11% { left: var(--boxWidthNeg); }
+}
