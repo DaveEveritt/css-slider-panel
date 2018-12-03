@@ -1,6 +1,10 @@
 html {
-  --boxWidth: 500px;
-  --boxWidthNeg: -500px;
+  /* heading aligns okay only with pixels???
+  --boxWidth: 600px;
+  --boxWidthNeg: -600px;
+  */
+  --boxWidth: 90%;
+  --boxWidthNeg: -90%;
 }
 body {
   background: #aaa;
@@ -27,7 +31,7 @@ section:hover article{
 article {
   position: absolute;
   left: var(--boxWidth);
-  background: #3b3b3b;
+  background: #666;
   color: #e3e3e3;
   width: var(--boxWidth);
   height: inherit;
@@ -36,8 +40,10 @@ article {
 }
 /* animation: name duration timing-function delay iteration-count; */
 article h2 {
-  margin-top: 1em;
   font-weight: normal;
+  background: #888;
+  line-height: 2em;
+  margin: 0;
 }
 
 article:nth-of-type(1) { animation-delay: 0s; }
