@@ -58,9 +58,17 @@ article:nth-of-type(9) { animation-delay: 40s; }
 article:nth-of-type(10){ animation-delay: 45s; }
 
 @keyframes slideIn {
-  0% { left: var(--boxWidth); }
-  1% { left: 0; }
+  0%  { left: var(--boxWidth); }
+  1%  { left: 0; }
   10% { left: 0; }
   100%{ left: var(--boxWidthNeg); }
   11% { left: var(--boxWidthNeg); }
 }
+/* ideally, use transform , but this fails: */
+/* @keyframes slideIn {
+  0%  { transform: translateX( var(--boxWidth) ); }
+  1%  { transform: translateX(0;) }
+  10% { transform: translateX(0;) }
+  100%{ transform: translateX(var(--boxWidthNeg);) }
+  11% { transform: translateX(var(--boxWidthNeg);) }
+} */
